@@ -1,0 +1,29 @@
+server:
+  port: 9003
+  servlet:
+    context-path: /client
+spring:
+  application:
+    name: nebula-oauth2-client
+  thymeleaf:
+    cache: false
+
+security:
+  oauth2:
+    client:
+      # 客户端ID
+      client-id: 5d29de44b87ce391dd78ce59
+      # 客户端密钥
+      client-secret: 123456
+      # 获取访问令牌的URI
+      access-token-uri: http://localhost:9001/oauth/token
+      # 用户将被重定向到的授权 URI
+      user-authorization-uri: http://localhost:9001/oauth/authorize
+    resource:
+      jwt:
+        # 获取JWT 非对称加密的公钥URI
+        key-uri: http://localhost:9001/oauth/token_key
+
+logging:
+  level:
+    "org.springframework.security.oauth2": debug

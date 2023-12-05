@@ -3,21 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cn.taroco</groupId>
-    <artifactId>taroco</artifactId>
+    <groupId>com.nebula</groupId>
+    <artifactId>nebulasync</artifactId>
     <version>2.0.1-SNAPSHOT</version>
     <modules>
-        <module>taroco-common-starter</module>
-        <module>taroco-docs</module>
-        <module>taroco-gateway-zuul</module>
-        <module>taroco-rbac</module>
-        <module>taroco-service-governance</module>
-        <module>taroco-authentication</module>
+        <module>nebula-common-starter</module>
+        <module>nebula-docs</module>
+        <module>nebula-gateway-zuul</module>
+        <module>nebula-rbac</module>
+        <module>nebula-service-governance</module>
+        <module>nebula-authentication</module>
+        <module>nebula-oauth2-client</module>
+        <module>nebula-oauth2-resource</module>
     </modules>
     <packaging>pom</packaging>
 
-    <name>taroco</name>
-    <description>Taroco Project for Spring Cloud Alibaba</description>
+    <name>NebulaSync</name>
+    <description>NebulaSync with Spring Cloud Alibaba</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -68,33 +70,33 @@
             </dependency>
             <!-- 自定义 starter -->
             <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-common-spring-boot-starter</artifactId>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-common-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-feign-spring-boot-starter</artifactId>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-feign-spring-boot-starter</artifactId>
+                <version>2.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-log-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-log-spring-boot-starter</artifactId>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-redis-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-redis-spring-boot-starter</artifactId>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-ribbon-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-ribbon-spring-boot-starter</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>cn.taroco</groupId>
-                <artifactId>taroco-swagger2-spring-boot-starter</artifactId>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-swagger2-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- spring-boot-admin server -->
@@ -200,6 +202,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
         </dependency>
         <!-- nacos discovery -->
         <dependency>

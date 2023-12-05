@@ -4,7 +4,7 @@
 
 1. 安装数据库，版本要求：5.6.5+
 2. 新建数据库并且初始化mysql数据库，数据库初始化文件：conf/nacos-mysql.sql
-3. 导入Taroco的配置文件：conf/nacos-mysql-data.sql
+3. 导入nebula的配置文件：conf/nacos-mysql-data.sql
 3. 修改conf/application.properties文件，增加支持mysql数据源配置（目前只支持mysql），添加mysql数据源的url、用户名和密码
 
 ```bash

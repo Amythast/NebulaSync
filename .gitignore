@@ -23,7 +23,7 @@ dist/
 nbdist/
 .nb-gradle/
 
-### Taroco
+### nebula
 logs
 LOG_FILE_IS_UNDEFINED
 /jars/nacos/logs

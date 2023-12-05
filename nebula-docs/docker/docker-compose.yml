@@ -1,0 +1,55 @@
+version: '2'
+services:
+  nebula-authentication-server:
+    build:
+      context: ./
+      dockerfile: Dockerfile-auth
+    restart: always
+    ports:
+      - 9001:9001
+    volumes:
+      - /data/logs/nebula-authentication-server/:/logs/nebula-authentication-server/
+    networks:
+      - nebula
+
+  nebula-rbac:
+    build:
+      context: ./
+      dockerfile: Dockerfile-rbac
+    restart: always
+    ports:
+      - 9009:9009
+    volumes:
+      - /data/logs/nebula-rbac-service/:/logs/nebula-rbac-service/
+    networks:
+      - nebula
+
+  nebula-service-governance:
+    build:
+      context: ./
+      dockerfile: Dockerfile-governance
+    restart: always
+    ports:
+      - 9002:9002
+    volumes:
+      - /data/logs/nebula-service-governance/:/logs/nebula-service-governance/
+    networks:
+      - nebula
+
+  nebula-gateway-zuul:
+    build:
+      context: ./
+      dockerfile: Dockerfile-gateway-zuul
+    restart: always
+    ports:
+      - 9000:9000
+    depends_on:
+      - nebula-authentication-server
+      - nebula-rbac
+    volumes:
+      - /data/logs/nebula-gateway-zuul/:/logs/nebula-gateway-zuul/
+    networks:
+      - nebula
+
+networks:
+  nebula:

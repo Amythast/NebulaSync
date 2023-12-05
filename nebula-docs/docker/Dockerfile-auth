@@ -1,0 +1,15 @@
+FROM java:8-jre
+MAINTAINER nebula feifeixia <18351806165@163.com>
+
+ADD ./jar/nebula-authentication*.jar /app/app.jar
+
+EXPOSE 9001
+
+ENV JAVA_OPTS="-Xmx256m -Xms256m"
+ENV CONFIG_PROFILE=show
+
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS \
+-Dfile.encoding=UTF8 -Duser.timezone=GMT+08 \
+-Djava.security.egd=file:/dev/./urandom \
+-jar /app/app.jar \
+--spring.profiles.active=$CONFIG_PROFILE"]

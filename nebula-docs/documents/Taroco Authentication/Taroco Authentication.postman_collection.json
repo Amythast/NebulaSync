@@ -1,0 +1,505 @@
+{
+	"info": {
+		"_postman_id": "424880d4-0a73-4b57-883e-637883d7dde5",
+		"name": "Taroco Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "登录",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"ad\",\n\t\"password\": \"ad\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "手机号验证码登录",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/login/mobile?mobile=18181956331&code=384446",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login",
+						"mobile"
+					],
+					"query": [
+						{
+							"key": "mobile",
+							"value": "18181956331"
+						},
+						{
+							"key": "code",
+							"value": "384446"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "退出登录",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询登录用户信息",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发送验证码",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/smsCode/18181956331",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"smsCode",
+						"18181956331"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询客户端分页",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token[password模式]",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=password&username=admin&password=admin&client_id=5d22eb6e8b0c7ba066014398&client_secret=123456&scope=All",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "admin"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456"
+						},
+						{
+							"key": "scope",
+							"value": "All"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token[mobile模式]",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "5d22eb6e8b0c7ba066014398",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/mobile?mobile=18181956331&code=120378&scope=All",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"mobile"
+					],
+					"query": [
+						{
+							"key": "mobile",
+							"value": "18181956331"
+						},
+						{
+							"key": "code",
+							"value": "120378"
+						},
+						{
+							"key": "scope",
+							"value": "All"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token[client_credentials模式]",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=client_credentials&client_id=5d22eb6e8b0c7ba066014398&client_secret=123456&scope=All",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456"
+						},
+						{
+							"key": "scope",
+							"value": "All"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token[implicit模式]",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/authorize?response_type=token&client_id=5d22eb6e8b0c7ba066014398&redirect_uri=https://www.baidu.com&scope=All&state=test12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "token"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.baidu.com"
+						},
+						{
+							"key": "scope",
+							"value": "All"
+						},
+						{
+							"key": "state",
+							"value": "test12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取token[authorization_code模式]",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=authorization_code&scope=All&client_id=5d22eb6e8b0c7ba066014398&client_secret=123456&code=fowcfs&redirect_uri=https://www.baidu.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "scope",
+							"value": "All"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456"
+						},
+						{
+							"key": "code",
+							"value": "fowcfs"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.baidu.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取code",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/authorize?response_type=code&redirect_uri=https://www.baidu.com&client_id=5d22eb6e8b0c7ba066014398",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://www.baidu.com"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刷新token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token?grant_type=refresh_token&client_id=5d22eb6e8b0c7ba066014398&client_secret=123456&refresh_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbIkFsbCJdLCJhdGkiOiIxZmZmNmUyYi0wNTEyLTQ5MzgtYTZkZS00NmIwYjhmZGVhMDgiLCJ4LXVzZXItaWQiOi0xMTgyMjEzMjIsImV4cCI6MTU2Mjk4MjYyNSwieC11c2VyLW5hbWUiOiJhZG1pbiIsImp0aSI6ImEzODcxYTMxLTI0NzAtNDI1OS1iNjZiLWI3NTQ0YzI2ZmM5ZiIsImNsaWVudF9pZCI6IjVkMjJlYjZlOGIwYzdiYTA2NjAxNDM5OCJ9.Gn7eb4NDmiAwpVRu7AQMTENDNSEDyKRUmGXAjTM8ZazsPxKch-UGVPEx5HI79VW2ENTACCP_hdW55j6XO1cZTNngeirKctaYKc1AOLGm5JJkZxs7LvmdU_Y69smjEhpRB1XiSHUygfT5kaQE99J1irwsXUKz4HjDBQcQMG5W4B53a9uL2WRdbjmrGu2brgAW53NHF34d-W_2I3Wkx_ocPEcGjn72mbkeZugYC7pBEWr-TYwV_QICUKakyf_AULOBlB1Rwfpv6EUTuAu2hYgtNhwdmBi7kzZ0E22ZkuIWIVRIsqufgOABM6_W1nlkzxsGtHX9683PkjW_io-JIXgSHA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "client_id",
+							"value": "5d22eb6e8b0c7ba066014398"
+						},
+						{
+							"key": "client_secret",
+							"value": "123456"
+						},
+						{
+							"key": "refresh_token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbIkFsbCJdLCJhdGkiOiIxZmZmNmUyYi0wNTEyLTQ5MzgtYTZkZS00NmIwYjhmZGVhMDgiLCJ4LXVzZXItaWQiOi0xMTgyMjEzMjIsImV4cCI6MTU2Mjk4MjYyNSwieC11c2VyLW5hbWUiOiJhZG1pbiIsImp0aSI6ImEzODcxYTMxLTI0NzAtNDI1OS1iNjZiLWI3NTQ0YzI2ZmM5ZiIsImNsaWVudF9pZCI6IjVkMjJlYjZlOGIwYzdiYTA2NjAxNDM5OCJ9.Gn7eb4NDmiAwpVRu7AQMTENDNSEDyKRUmGXAjTM8ZazsPxKch-UGVPEx5HI79VW2ENTACCP_hdW55j6XO1cZTNngeirKctaYKc1AOLGm5JJkZxs7LvmdU_Y69smjEhpRB1XiSHUygfT5kaQE99J1irwsXUKz4HjDBQcQMG5W4B53a9uL2WRdbjmrGu2brgAW53NHF34d-W_2I3Wkx_ocPEcGjn72mbkeZugYC7pBEWr-TYwV_QICUKakyf_AULOBlB1Rwfpv6EUTuAu2hYgtNhwdmBi7kzZ0E22ZkuIWIVRIsqufgOABM6_W1nlkzxsGtHX9683PkjW_io-JIXgSHA"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
