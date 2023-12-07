@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <contextName>Taroco-Authentication</contextName>
-    <springProperty name="LOG_FILE" scope="context" source="logging.file" defaultValue="logs/taroco-authentication"/>
+    <contextName>Nebula-Authentication</contextName>
+    <springProperty name="LOG_FILE" scope="context" source="logging.file" defaultValue="logs/nebula-authentication"/>
     <springProperty name="LOG_MAXFILESIZE" scope="context" source="logback.filesize" defaultValue="50MB"/>
     <springProperty name="LOG_FILEMAXDAY" scope="context" source="logback.filemaxday" defaultValue="7"/>
     <springProperty name="ServerIP" scope="context" source="spring.cloud.client.ip-address" defaultValue="0.0.0.0"/>

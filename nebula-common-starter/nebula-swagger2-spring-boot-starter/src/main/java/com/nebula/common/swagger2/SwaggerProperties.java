@@ -15,7 +15,7 @@ import java.util.Map;
  * @date 2017/11/18 9:17
  */
 @Data
-@ConfigurationProperties("taroco.swagger")
+@ConfigurationProperties("nebula.swagger")
 public class SwaggerProperties {
     /**是否开启swagger**/
     private Boolean enabled;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author feifeixia
  * 2019/7/26 10:13
  */
-@FeignClient(name = "taroco-rbac-service", fallback = UserServiceFallbackImpl.class)
+@FeignClient(name = "nebula-rbac-service", fallback = UserServiceFallbackImpl.class)
 public interface UserService {
 
     /**

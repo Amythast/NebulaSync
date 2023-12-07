@@ -9,15 +9,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * taroco oauth2 配置类
+ * nebula oauth2 配置类
  *
  * @author feifeixia
  * 2018/12/4 15:34
  */
 @Component
-@ConfigurationProperties("taroco.oauth2")
+@ConfigurationProperties("nebula.oauth2")
 @Data
-public class TarocoOauth2Properties {
+public class NebulaOauth2Properties {
 
     /**
      * accessTokenValiditySeconds, default: 1 day.

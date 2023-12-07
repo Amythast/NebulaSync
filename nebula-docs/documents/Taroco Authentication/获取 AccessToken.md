@@ -23,7 +23,7 @@
     "expires_in": 86399,
     "scope": "All",
     "jti": "e2783163-72fd-4dd8-94cf-4d147cb8c747",
-    "license": "made by taroco",
+    "license": "made by nebula",
     "x-user-name": "admin",
     "x-user-id": 909620761
 }
@@ -48,7 +48,7 @@
     "expires_in": 86399,
     "scope": "All",
     "jti": "e2783163-72fd-4dd8-94cf-4d147cb8c747",
-    "license": "made by taroco",
+    "license": "made by nebula",
     "x-user-name": "admin",
     "x-user-id": 909620761
 }
@@ -74,7 +74,7 @@
     "expires_in": 86399,
     "scope": "All",
     "jti": "e2783163-72fd-4dd8-94cf-4d147cb8c747",
-    "license": "made by taroco",
+    "license": "made by nebula",
     "x-user-name": "admin",
     "x-user-id": 909620761
 }
@@ -112,7 +112,7 @@
     "expires_in": 86399,
     "scope": "All",
     "jti": "e2783163-72fd-4dd8-94cf-4d147cb8c747",
-    "license": "made by taroco",
+    "license": "made by nebula",
     "x-user-name": "admin",
     "x-user-id": 909620761
 }

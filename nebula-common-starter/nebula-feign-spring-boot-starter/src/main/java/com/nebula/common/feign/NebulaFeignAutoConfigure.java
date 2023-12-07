@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2018/9/18 14:04
  */
 @Configuration
-public class TarocoFeignAutoConfigure {
+public class NebulaFeignAutoConfigure {
 
     /**
      * Feign 日志级别

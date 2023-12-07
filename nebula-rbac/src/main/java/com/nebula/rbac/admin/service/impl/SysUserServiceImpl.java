@@ -5,7 +5,7 @@ import com.nebula.common.constants.CacheConstants;
 import com.nebula.common.constants.CommonConstant;
 import com.nebula.common.constants.SecurityConstants;
 import com.nebula.common.exception.InvalidParamException;
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import com.nebula.common.utils.PageQuery;
 import com.nebula.common.vo.SysRole;
 import com.nebula.common.vo.UserVO;
@@ -41,7 +41,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
     private static final PasswordEncoder ENCODER = new BCryptPasswordEncoder();
 
     @Autowired
-    private TarocoRedisRepository redisRepository;
+    private NebulaRedisRepository redisRepository;
 
     @Autowired
     private SysUserMapper sysUserMapper;

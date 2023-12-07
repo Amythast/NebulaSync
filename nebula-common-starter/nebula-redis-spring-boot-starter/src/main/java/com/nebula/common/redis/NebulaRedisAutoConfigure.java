@@ -1,6 +1,6 @@
 package com.nebula.common.redis;
 
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
@@ -16,9 +16,9 @@ import org.springframework.data.redis.core.RedisTemplate;
  * @date 2017/11/6 11:02
  */
 @Configuration
-@ConditionalOnClass(TarocoRedisRepository.class)
+@ConditionalOnClass(NebulaRedisRepository.class)
 @EnableConfigurationProperties(RedisProperties.class)
-public class TarocoRedisAutoConfigure {
+public class NebulaRedisAutoConfigure {
 
     /**
      * Redis repository redis repository.
@@ -28,7 +28,7 @@ public class TarocoRedisAutoConfigure {
      */
     @Bean
     @ConditionalOnMissingBean
-    public TarocoRedisRepository redisRepository(RedisTemplate<String, String> redisTemplate) {
-        return new TarocoRedisRepository(redisTemplate);
+    public NebulaRedisRepository redisRepository(RedisTemplate<String, String> redisTemplate) {
+        return new NebulaRedisRepository(redisTemplate);
     }
 }

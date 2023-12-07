@@ -3,7 +3,7 @@ package com.nebula.rbac.admin.service.impl;
 import com.nebula.common.constants.CacheConstants;
 import com.nebula.common.constants.CommonConstant;
 import com.nebula.common.entity.SysRoute;
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import com.nebula.common.utils.JsonUtils;
 import com.nebula.rbac.admin.mapper.SysRouteMapper;
 import com.nebula.rbac.admin.service.SysRouteService;
@@ -24,7 +24,7 @@ import java.util.List;
 public class SysRouteServiceImpl extends ServiceImpl<SysRouteMapper, SysRoute> implements SysRouteService {
 
     @Autowired
-    private TarocoRedisRepository redisRepository;
+    private NebulaRedisRepository redisRepository;
 
     /**
      * 同步路由配置信息,到服务网关

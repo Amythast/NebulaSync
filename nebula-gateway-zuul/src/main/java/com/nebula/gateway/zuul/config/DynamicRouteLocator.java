@@ -3,7 +3,7 @@ package com.nebula.gateway.zuul.config;
 import cn.hutool.core.collection.CollUtil;
 import com.nebula.common.constants.CacheConstants;
 import com.nebula.common.entity.SysRoute;
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import com.alibaba.fastjson.JSONArray;
 import cn.hutool.core.util.StrUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -27,10 +27,10 @@ public class DynamicRouteLocator extends DiscoveryClientRouteLocator {
 
     private ZuulProperties properties;
 
-    private TarocoRedisRepository redisRepository;
+    private NebulaRedisRepository redisRepository;
 
     public DynamicRouteLocator(String servletPath, DiscoveryClient discovery, ZuulProperties properties,
-                               ServiceInstance localServiceInstance, TarocoRedisRepository redisRepository) {
+                               ServiceInstance localServiceInstance, NebulaRedisRepository redisRepository) {
         super(servletPath, discovery, properties, localServiceInstance);
         this.properties = properties;
         this.redisRepository = redisRepository;

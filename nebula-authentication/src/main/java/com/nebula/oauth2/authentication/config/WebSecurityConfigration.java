@@ -1,6 +1,6 @@
 package com.nebula.oauth2.authentication.config;
 
-import com.nebula.oauth2.authentication.oauth2.configurer.MobileTokenAuthenticationSecurityConfigration;
+import com.nebula.oauth2.authentication.oauth2.configurer.MobileTokenAuthenticationSecurityConfiguration;
 import com.nebula.oauth2.authentication.mvc.configurer.SmsCodeAuthenticationSecurityConfigration;
 import com.nebula.oauth2.authentication.mvc.filter.CustomUsernamePasswordAuthenticationFilter;
 import com.nebula.oauth2.authentication.mvc.handler.CustomAccessDeniedHandler;
@@ -45,7 +45,7 @@ public class WebSecurityConfigration extends WebSecurityConfigurerAdapter {
     private DataSource dataSource;
 
     @Autowired
-    private TarocoOauth2Properties oauth2Properties;
+    private NebulaOauth2Properties oauth2Properties;
 
     @Autowired
     private UserNameUserDetailsServiceImpl userNameUserDetailsService;
@@ -66,7 +66,7 @@ public class WebSecurityConfigration extends WebSecurityConfigurerAdapter {
     private UsernamePasswordLogoutSuccessHandler logoutSuccessHandler;
 
     @Autowired
-    private MobileTokenAuthenticationSecurityConfigration mobileTokenAuthenticationSecurityConfigration;
+    private MobileTokenAuthenticationSecurityConfiguration mobileTokenAuthenticationSecurityConfiguration;
 
     @Autowired
     private SmsCodeAuthenticationSecurityConfigration smsCodeAuthenticationSecurityConfigration;
@@ -79,7 +79,7 @@ public class WebSecurityConfigration extends WebSecurityConfigurerAdapter {
                 http
                         // 默认的用户名密码认证器
                         .authenticationProvider(daoAuthenticationProvider())
-                        .apply(mobileTokenAuthenticationSecurityConfigration)
+                        .apply(mobileTokenAuthenticationSecurityConfiguration)
                         .and()
                         .apply(smsCodeAuthenticationSecurityConfigration)
                         .and()

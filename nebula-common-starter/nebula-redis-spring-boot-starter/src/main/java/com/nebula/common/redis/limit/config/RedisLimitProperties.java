@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @date 2018/8/15 9:10
  */
 @Data
-@ConfigurationProperties("taroco.redis.limit")
+@ConfigurationProperties("nebula.redis.limit")
 public class RedisLimitProperties {
 
     /**

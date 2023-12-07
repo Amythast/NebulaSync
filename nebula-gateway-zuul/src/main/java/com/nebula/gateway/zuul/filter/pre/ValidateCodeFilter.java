@@ -4,7 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.nebula.common.constants.CacheConstants;
 import com.nebula.common.constants.SecurityConstants;
 import com.nebula.common.exception.ValidateCodeException;
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import com.nebula.common.utils.JsonUtils;
 import com.nebula.common.web.Response;
 import com.netflix.zuul.ZuulFilter;
@@ -37,7 +37,7 @@ public class ValidateCodeFilter extends ZuulFilter {
     private static final String EXPIRED_CAPTCHA_ERROR = "验证码已过期，请重新获取";
 
     @Autowired
-    private TarocoRedisRepository redisRepository;
+    private NebulaRedisRepository redisRepository;
 
     @Override
     public String filterType() {

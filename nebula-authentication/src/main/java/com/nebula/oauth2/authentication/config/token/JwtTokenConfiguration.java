@@ -1,6 +1,6 @@
 package com.nebula.oauth2.authentication.config.token;
 
-import com.nebula.oauth2.authentication.config.TarocoOauth2Properties;
+import com.nebula.oauth2.authentication.config.NebulaOauth2Properties;
 import com.nebula.oauth2.authentication.oauth2.token.CustomerAccessTokenConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -17,10 +17,10 @@ import java.security.KeyPair;
  * @author feifeixia
  * 2019/7/15 15:57
  */
-public class JwtTokenConfigration {
+public class JwtTokenConfiguration {
 
     @Autowired
-    private TarocoOauth2Properties oauth2Properties;
+    private NebulaOauth2Properties oauth2Properties;
 
     @Bean
     public TokenStore tokenStore() {

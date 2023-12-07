@@ -20,13 +20,13 @@ import javax.validation.Validator;
 import java.util.List;
 
 /**
- * taroco 公共配置类, 一些公共工具配置
+ * nebula 公共配置类, 一些公共工具配置
  *
  * @author feifeixia
  * @date 2017/8/25
  */
 @Configuration
-public class TarocoCommonAutoConfig implements WebMvcConfigurer {
+public class NebulaCommonAutoConfig implements WebMvcConfigurer {
 
     /**
      * Token参数解析

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.nebula.common.feign.TarocoFeignAutoConfigure
+com.nebula.common.feign.NebulaFeignAutoConfigure

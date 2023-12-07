@@ -11,10 +11,10 @@ public interface ServiceNameConst {
     /**
      * 用户权限服务
      */
-    String RBAC_SERVICE = "taroco-rbac-service";
+    String RBAC_SERVICE = "nebula-rbac-service";
 
     /**
      * 认证服务
      */
-    String AUTH_SERVICE = "taroco-authentication-server";
+    String AUTH_SERVICE = "nebula-authentication-server";
 }

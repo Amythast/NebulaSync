@@ -19,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 @Configuration
 @EnableConfigurationProperties(RedisLimitProperties.class)
-@ConditionalOnProperty(name = "taroco.redis.limit.enabled", havingValue = "true")
+@ConditionalOnProperty(name = "nebula.redis.limit.enabled", havingValue = "true")
 public class RedisLimitAutoConfigurer implements WebMvcConfigurer {
 
 

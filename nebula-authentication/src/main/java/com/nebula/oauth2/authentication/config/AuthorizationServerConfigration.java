@@ -53,7 +53,7 @@ public class AuthorizationServerConfigration extends AuthorizationServerConfigur
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    private TarocoOauth2Properties oauth2Properties;
+    private NebulaOauth2Properties oauth2Properties;
 
     @Autowired
     private NebulaRedisRepository redisRepository;

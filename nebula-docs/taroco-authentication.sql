@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : 本机root
 Source Server Version : 80016
 Source Host           : localhost:3306
-Source Database       : taroco-authentication
+Source Database       : nebula-authentication
 
 Target Server Type    : MYSQL
 Target Server Version : 80016
@@ -37,8 +37,8 @@ CREATE TABLE `flyway_schema_history` (
 -- ----------------------------
 -- Records of flyway_schema_history
 -- ----------------------------
-INSERT INTO `flyway_schema_history` VALUES ('1', '20190703.10.30', 'init', 'SQL', 'V20190703.10.30__init.sql', '-1596339199', 'taroco-authentication', '2019-07-16 17:18:45', '432', '1');
-INSERT INTO `flyway_schema_history` VALUES ('2', '20190722.10.00', 'add RememberMe', 'SQL', 'V20190722.10.00__add_RememberMe.sql', '-1273418332', 'taroco-authentication', '2019-07-22 10:11:27', '1666', '1');
+INSERT INTO `flyway_schema_history` VALUES ('1', '20190703.10.30', 'init', 'SQL', 'V20190703.10.30__init.sql', '-1596339199', 'nebula-authentication', '2019-07-16 17:18:45', '432', '1');
+INSERT INTO `flyway_schema_history` VALUES ('2', '20190722.10.00', 'add RememberMe', 'SQL', 'V20190722.10.00__add_RememberMe.sql', '-1273418332', 'nebula-authentication', '2019-07-22 10:11:27', '1666', '1');
 
 -- ----------------------------
 -- Table structure for oauth_client_details
@@ -63,7 +63,7 @@ CREATE TABLE `oauth_client_details` (
 -- ----------------------------
 -- Records of oauth_client_details
 -- ----------------------------
-INSERT INTO `oauth_client_details` VALUES ('5d22eb6e8b0c7ba066014398', 'taroco', null, '$2a$10$499/h5FHgttabN6PPbrXoOJCDdkvQCnPe3zAhwlZrKyudddXrQXhy', 'All', 'password,refresh_token', 'http://127.0.0.1:9000/login', null, null, null, null, 'true');
+INSERT INTO `oauth_client_details` VALUES ('5d22eb6e8b0c7ba066014398', 'nebula', null, '$2a$10$499/h5FHgttabN6PPbrXoOJCDdkvQCnPe3zAhwlZrKyudddXrQXhy', 'All', 'password,refresh_token', 'http://127.0.0.1:9000/login', null, null, null, null, 'true');
 INSERT INTO `oauth_client_details` VALUES ('5d29de44b87ce391dd78ce59', '客户端1', null, '$2a$10$sACBWktOBUbVBBsX/ilFa.vnWeFpjuL1PMPmjZ32W/mBS4hcxVuiu', 'All', 'password,authorization_code,refresh_token,client_credentials,implicit', 'http://127.0.0.1:9003/client1/login', null, null, null, null, 'true');
 INSERT INTO `oauth_client_details` VALUES ('5d29de5eb87ce391dd78ce5a', '客户端2', null, '$2a$10$.7lmismtyamElFZ4hk1lJOpLgjleA9In4BQ.E8UhnoyAGAf.c.nru', 'All', 'password,authorization_code,refresh_token,client_credentials,implicit', 'http://127.0.0.1:9004/client2/login', null, null, null, null, 'true');
 INSERT INTO `oauth_client_details` VALUES ('5d29de7ab87ce391dd78ce5b', '资源服务器1', null, '$2a$10$Yb4MwXXi48sami3iIoUDlOpCabyjz0JcnyFinnRAakQ03ba3U7GM.', 'All', 'password,authorization_code,refresh_token,client_credentials,implicit', 'http://127.0.0.1:9005', null, null, null, null, 'true');

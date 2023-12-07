@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.nebula.common.ribbon.TarocoRibbonAutoConfigure
+com.nebula.common.ribbon.NebulaRibbonAutoConfigure

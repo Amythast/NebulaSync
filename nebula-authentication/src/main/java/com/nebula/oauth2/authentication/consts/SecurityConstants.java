@@ -35,7 +35,7 @@ public interface SecurityConstants {
     /**
      * 项目的license
      */
-    String LICENSE = "made by taroco";
+    String LICENSE = "made by nebula";
 
     /**
      * 手机号获取token路径

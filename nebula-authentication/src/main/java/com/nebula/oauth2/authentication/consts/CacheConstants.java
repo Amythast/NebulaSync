@@ -14,9 +14,9 @@ public interface CacheConstants {
     String SPLIT = ":";
 
     /**
-     * TAROCO缓存公共前缀
+     * NEBULA缓存公共前缀
      */
-    String PREFIX = "taroco" + SPLIT;
+    String PREFIX = "nebula" + SPLIT;
 
     /**
      * Redis session 缓存前缀

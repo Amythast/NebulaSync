@@ -11,5 +11,5 @@ public class RedisToolsConstant {
     /**
      * 分布式锁 key的前缀
      */
-    public final static String DISTRIBUTE_LOCK_PREFIX = "taroco:lock";
+    public final static String DISTRIBUTE_LOCK_PREFIX = "nebula:lock";
 }

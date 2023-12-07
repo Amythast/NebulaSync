@@ -3,7 +3,7 @@ package com.nebula.rbac.admin.common.listener;
 import com.nebula.common.constants.CacheConstants;
 import com.nebula.common.constants.CommonConstant;
 import com.nebula.common.entity.SysRoute;
-import com.nebula.common.redis.template.TarocoRedisRepository;
+import com.nebula.common.redis.template.NebulaRedisRepository;
 import com.nebula.common.utils.JsonUtils;
 import com.nebula.rbac.admin.service.SysRouteService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -26,7 +26,7 @@ import java.util.List;
 public class RouteConfigInitListener implements ApplicationListener<ApplicationStartedEvent> {
 
     @Autowired
-    private TarocoRedisRepository redisRepository;
+    private NebulaRedisRepository redisRepository;
 
     @Autowired
     private SysRouteService sysRouteService;

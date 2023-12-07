@@ -11,7 +11,7 @@ import springfox.documentation.swagger2.configuration.Swagger2DocumentationConfi
  * @date 2017/11/18 9:20
  */
 @Configuration
-@ConditionalOnProperty(name = "taroco.swagger.enabled", matchIfMissing = true)
+@ConditionalOnProperty(name = "nebula.swagger.enabled", matchIfMissing = true)
 @Import({
         Swagger2DocumentationConfiguration.class
 })

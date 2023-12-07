@@ -33,9 +33,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Taroco Swagger API ")
-                .description("https://github.com/feifeixia777/Taroco")
-                .termsOfServiceUrl("https://github.com/feifeixia777/Taroco")
+                .title("Nebula Swagger API ")
+                .description("https://github.com/feifeixia777/Nebula")
+                .termsOfServiceUrl("https://github.com/feifeixia777/Nebula")
                 .contact(new Contact("feifeixia", "https://github.com/feifeixia777", "feifeixia777@qq.com"))
                 .version("1.0")
                 .build();

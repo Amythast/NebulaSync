@@ -25,10 +25,10 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableDiscoveryClient
 @EnableRedisHttpSession(redisNamespace = CacheConstants.REDIS_SESSION_PREFIX)
 @SpringBootApplication
-public class TarocoAuthenticationApplication {
+public class NebulaAuthenticationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TarocoAuthenticationApplication.class, args);
+        SpringApplication.run(NebulaAuthenticationApplication.class, args);
     }
 
     /**

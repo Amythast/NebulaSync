@@ -105,7 +105,7 @@ spring:
 ## 服务发现与负载均衡
 
 - 直接使用 Eureka Client 还是比较麻烦的，幸运的是，Spring Cloud为我们提供了整合过后的RestTemplate以及Feign。我们可以通过这两种方式很好的进行服务调用。
-- Taroco中对RestTemplate和Feign都做了响应的扩展，因为两者都是通过ribbon作为负载均衡器的，因此对应的扩展都放在taroco-ribbon-spring-boot-starter当中。
+- Nebula中对RestTemplate和Feign都做了响应的扩展，因为两者都是通过ribbon作为负载均衡器的，因此对应的扩展都放在Nebula-ribbon-spring-boot-starter当中。
 
 ## Eureka高可用理论
 

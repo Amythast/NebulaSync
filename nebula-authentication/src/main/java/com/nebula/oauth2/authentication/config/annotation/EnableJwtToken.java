@@ -1,6 +1,6 @@
 package com.nebula.oauth2.authentication.config.annotation;
 
-import com.nebula.oauth2.authentication.config.token.JwtTokenConfigration;
+import com.nebula.oauth2.authentication.config.token.JwtTokenConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Documented;
@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(JwtTokenConfigration.class)
+@Import(JwtTokenConfiguration.class)
 public @interface EnableJwtToken {
 
 }

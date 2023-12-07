@@ -1,6 +1,6 @@
 package com.nebula.gateway.zuul.config;
 
-import com.nebula.common.config.TarocoOauth2Properties;
+import com.nebula.common.config.NebulaOauth2Properties;
 import com.nebula.gateway.zuul.handler.CustomerAccessDeniedHandler;
 import com.nebula.gateway.zuul.handler.CustomerExceptionEntryPoint;
 import lombok.extern.slf4j.Slf4j;
@@ -26,12 +26,12 @@ import org.springframework.security.oauth2.provider.expression.OAuth2WebSecurity
  */
 @Configuration
 @EnableResourceServer
-@EnableConfigurationProperties(TarocoOauth2Properties.class)
+@EnableConfigurationProperties(NebulaOauth2Properties.class)
 @Slf4j
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
 
     @Autowired
-    private TarocoOauth2Properties oauth2Properties;
+    private NebulaOauth2Properties oauth2Properties;
 
     @Autowired
     private OAuth2WebSecurityExpressionHandler expressionHandler;

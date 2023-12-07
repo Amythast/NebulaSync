@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2017/11/17 9:24
  */
 @Configuration
-public class TarocoRibbonAutoConfigure {
+public class NebulaRibbonAutoConfigure {
 
     @Bean
     public DefaultPropertiesFactory defaultPropertiesFactory() {

@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : 本机root
 Source Server Version : 80016
 Source Host           : localhost:3306
-Source Database       : taroco
+Source Database       : nebula
 
 Target Server Type    : MYSQL
 Target Server Version : 80016
@@ -137,12 +137,12 @@ INSERT INTO `sys_menu` VALUES ('4', '角色管理', 'role', null, '1', 'user-cir
 INSERT INTO `sys_menu` VALUES ('5', '日志管理', 'log', null, '1', 'copy', '10', '2017-11-20 14:06:22', '2018-09-08 02:01:49', '0');
 INSERT INTO `sys_menu` VALUES ('6', '字典管理', 'dict', null, '1', 'list-alt', '6', '2017-11-29 11:30:52', '2018-09-08 02:01:49', '0');
 INSERT INTO `sys_menu` VALUES ('7', '部门管理', 'dept', null, '1', 'codepen', '7', '2018-01-20 13:17:19', '2018-09-08 02:01:49', '0');
-INSERT INTO `sys_menu` VALUES ('8', '服务管理', '/taroco-admin', null, '-1', 'line-chart', '8', '2018-01-22 12:30:41', '2019-02-13 10:54:32', '0');
-INSERT INTO `sys_menu` VALUES ('14', '接口文档', 'taroco-api', '', '8', 'buysellads', '2', '2018-01-23 10:56:43', '2018-09-10 06:58:57', '0');
+INSERT INTO `sys_menu` VALUES ('8', '服务管理', '/nebula-admin', null, '-1', 'line-chart', '8', '2018-01-22 12:30:41', '2019-02-13 10:54:32', '0');
+INSERT INTO `sys_menu` VALUES ('14', '接口文档', 'nebula-api', '', '8', 'buysellads', '2', '2018-01-23 10:56:43', '2018-09-10 06:58:57', '0');
 INSERT INTO `sys_menu` VALUES ('110', '路由管理', 'route', null, '1', 'object-ungroup', '8', '2018-05-15 21:44:51', '2018-09-08 02:02:07', '0');
 INSERT INTO `sys_menu` VALUES ('111', '权限管理', 'auth', null, '1', 'universal-access', '5', '2019-04-12 16:45:54', '2019-04-12 16:47:58', '0');
-INSERT INTO `sys_menu` VALUES ('112', '服务治理', 'taroco-governance', null, '8', 'line-chart', '1', '2019-04-12 16:45:54', '2019-04-12 16:47:58', '0');
-INSERT INTO `sys_menu` VALUES ('113', 'Sentinel 控制台', 'taroco-sentinel', null, '8', 'codiepie', '3', '2019-05-17 16:24:06', '2019-05-17 16:24:16', '0');
+INSERT INTO `sys_menu` VALUES ('112', '服务治理', 'nebula-governance', null, '8', 'line-chart', '1', '2019-04-12 16:45:54', '2019-04-12 16:47:58', '0');
+INSERT INTO `sys_menu` VALUES ('113', 'Sentinel 控制台', 'nebula-sentinel', null, '8', 'codiepie', '3', '2019-05-17 16:24:06', '2019-05-17 16:24:16', '0');
 
 -- ----------------------------
 -- Table structure for sys_permission
@@ -267,8 +267,8 @@ CREATE TABLE `sys_route` (
 -- ----------------------------
 -- Records of sys_route
 -- ----------------------------
-INSERT INTO `sys_route` VALUES ('4', '/admin/**', 'taroco-rbac-service', '', '1', '1', '1', '', '2018-05-21 11:40:38', '2019-02-19 14:21:14', '0');
-INSERT INTO `sys_route` VALUES ('5', '/auth/**', 'taroco-authentication-server', '', '1', '1', '1', '', '2018-05-21 11:41:08', '2019-02-19 14:21:11', '0');
+INSERT INTO `sys_route` VALUES ('4', '/admin/**', 'nebula-rbac-service', '', '1', '1', '1', '', '2018-05-21 11:40:38', '2019-02-19 14:21:14', '0');
+INSERT INTO `sys_route` VALUES ('5', '/auth/**', 'nebula-authentication-server', '', '1', '1', '1', '', '2018-05-21 11:41:08', '2019-02-19 14:21:11', '0');
 
 -- ----------------------------
 -- Table structure for sys_user
