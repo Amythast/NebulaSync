@@ -1,9 +1,9 @@
 package com.nebula.oauth2.authentication.controller;
 
 import cn.hutool.core.util.RandomUtil;
+import com.nebula.oauth2.authentication.config.redis.NebulaRedisRepository;
 import com.nebula.oauth2.authentication.consts.CacheConstants;
 import com.nebula.oauth2.authentication.mvc.response.Response;
-import com.nebula.oauth2.authentication.config.redis.NebulaRedisRepository;
 import com.nebula.oauth2.authentication.service.UserTransferService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

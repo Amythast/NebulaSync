@@ -21,4 +21,9 @@ public class UserController {
     public Object user(OAuth2Authentication authentication) {
         return authentication.getUserAuthentication();
     }
+
+    @GetMapping(value = {"/test"})
+    public String test() {
+        return "Test";
+    }
 }

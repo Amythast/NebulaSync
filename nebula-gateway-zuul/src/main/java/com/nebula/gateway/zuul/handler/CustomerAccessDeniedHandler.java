@@ -1,14 +1,8 @@
 package com.nebula.gateway.zuul.handler;
 
-import com.nebula.common.constants.CommonConstant;
-import com.nebula.common.exception.DefaultError;
-import com.nebula.common.utils.JsonUtils;
-import com.nebula.common.web.Response;
+import com.nebula.common.security.component.handler.BaseAccessDeniedHandler;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletException;
@@ -24,7 +18,7 @@ import java.io.IOException;
  */
 @Slf4j
 @Component
-public class CustomerAccessDeniedHandler extends OAuth2AccessDeniedHandler {
+public class CustomerAccessDeniedHandler extends BaseAccessDeniedHandler {
 
     /**
      * 授权拒绝处理，使用R包装
@@ -37,11 +31,6 @@ public class CustomerAccessDeniedHandler extends OAuth2AccessDeniedHandler {
      */
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException authException) throws IOException, ServletException {
-        log.info("授权失败，禁止访问 {}", request.getRequestURI());
-        response.setCharacterEncoding(CommonConstant.UTF8);
-        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
-        Response result = Response.failure(DefaultError.ACCESS_DENIED);
-        response.setStatus(HttpStatus.SC_FORBIDDEN);
-        response.getWriter().write(JsonUtils.toJsonString(result));
+        super.handle(request, response, authException);
     }
 }

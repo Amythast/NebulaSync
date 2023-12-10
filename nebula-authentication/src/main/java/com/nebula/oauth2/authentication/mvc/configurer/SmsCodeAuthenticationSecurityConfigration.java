@@ -5,7 +5,6 @@ import com.nebula.oauth2.authentication.mvc.filter.SmsCodeAuthenticationFilter;
 import com.nebula.oauth2.authentication.mvc.handler.UsernamePasswordAuthenticationFailureHandler;
 import com.nebula.oauth2.authentication.mvc.handler.UsernamePasswordAuthenticationSuccessHandler;
 import com.nebula.oauth2.authentication.mvc.provider.SmsCodeAuthenticationProvider;
-import com.nebula.oauth2.authentication.config.redis.NebulaRedisRepository;
 import com.nebula.oauth2.authentication.service.user.MobileUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -49,7 +48,7 @@ public class SmsCodeAuthenticationSecurityConfigration extends SecurityConfigure
         provider.setHideUserNotFoundExceptions(false);
 
         http
-                .authenticationProvider(provider)
-                .addFilterAfter(filter, UsernamePasswordAuthenticationFilter.class);
+            .authenticationProvider(provider)
+            .addFilterAfter(filter, UsernamePasswordAuthenticationFilter.class);
     }
 }

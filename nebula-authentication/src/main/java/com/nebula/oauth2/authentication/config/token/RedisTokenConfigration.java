@@ -1,5 +1,6 @@
 package com.nebula.oauth2.authentication.config.token;
 
+
 import com.nebula.oauth2.authentication.consts.CacheConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

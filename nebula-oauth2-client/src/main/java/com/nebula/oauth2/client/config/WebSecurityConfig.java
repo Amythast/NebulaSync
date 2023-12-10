@@ -38,12 +38,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http
-                .logout()
-                .logoutSuccessUrl("http://localhost:9001/oauth/exit")
-                .and()
-                .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .anyRequest().authenticated();
+        http.logout()
+            .logoutSuccessUrl("http://localhost:9001/oauth/exit")
+            .and()
+            .authorizeRequests()
+            .antMatchers("/").permitAll()
+            .anyRequest().authenticated();
     }
 }

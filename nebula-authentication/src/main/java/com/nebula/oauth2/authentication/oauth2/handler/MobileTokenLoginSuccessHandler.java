@@ -2,8 +2,8 @@ package com.nebula.oauth2.authentication.oauth2.handler;
 
 import cn.hutool.core.codec.Base64;
 import cn.hutool.core.map.MapUtil;
-import com.nebula.oauth2.authentication.consts.SecurityConstants;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.nebula.oauth2.authentication.consts.SecurityConstants;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -15,6 +15,7 @@
         <module>nebula-authentication</module>
         <module>nebula-oauth2-client</module>
         <module>nebula-oauth2-resource</module>
+        <module>nebula-common-starter/nebula-common-security-spring-boot-starter</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -72,6 +73,11 @@
             <dependency>
                 <groupId>com.nebula</groupId>
                 <artifactId>nebula-common-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nebula</groupId>
+                <artifactId>nebula-common-security-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

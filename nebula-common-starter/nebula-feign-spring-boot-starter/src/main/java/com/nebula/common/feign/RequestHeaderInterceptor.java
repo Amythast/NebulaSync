@@ -17,6 +17,8 @@ import java.util.Enumeration;
  */
 @Slf4j
 public class RequestHeaderInterceptor implements RequestInterceptor {
+    public RequestHeaderInterceptor() {
+    }
 
     @Override
     public void apply(final RequestTemplate template) {

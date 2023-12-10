@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.nebula.common.security.annotation.NebulaInnerAspect,\
+  com.nebula.common.security.config.NebulaSecurityAutoConfiguration

@@ -23,8 +23,8 @@ public class JwtTokenConfiguration {
     private NebulaOauth2Properties oauth2Properties;
 
     @Bean
-    public TokenStore tokenStore() {
-        return new JwtTokenStore(jwtAccessTokenConverter());
+    public TokenStore tokenStore(JwtAccessTokenConverter jwtAccessTokenConverter) {
+        return new JwtTokenStore(jwtAccessTokenConverter);
     }
 
     /**
@@ -35,9 +35,11 @@ public class JwtTokenConfiguration {
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         final JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        KeyPair keyPair = new KeyStoreKeyFactory
-                (oauth2Properties.getKeyStore().getLocation(), oauth2Properties.getKeyStore().getSecret().toCharArray())
-                .getKeyPair(oauth2Properties.getKeyStore().getAlias());
+        KeyPair keyPair = new KeyStoreKeyFactory(
+            oauth2Properties.getKeyStore().getLocation(),
+            oauth2Properties.getKeyStore().getSecret().toCharArray()
+        )
+        .getKeyPair(oauth2Properties.getKeyStore().getAlias());
         converter.setKeyPair(keyPair);
         converter.setAccessTokenConverter(new CustomerAccessTokenConverter());
         return converter;

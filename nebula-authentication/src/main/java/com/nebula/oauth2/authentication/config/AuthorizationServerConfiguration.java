@@ -47,7 +47,7 @@ import java.util.Map;
  */
 @Configuration
 @EnableAuthorizationServer
-public class AuthorizationServerConfigration extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
     private AuthenticationManager authenticationManager;

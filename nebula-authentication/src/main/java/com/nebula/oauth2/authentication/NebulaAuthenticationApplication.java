@@ -1,8 +1,8 @@
 package com.nebula.oauth2.authentication;
 
 import com.nebula.oauth2.authentication.config.annotation.EnableJwtToken;
-import com.nebula.oauth2.authentication.consts.CacheConstants;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
+import com.nebula.oauth2.authentication.consts.CacheConstants;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;

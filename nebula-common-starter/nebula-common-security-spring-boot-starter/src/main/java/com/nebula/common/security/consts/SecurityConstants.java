@@ -1,11 +1,10 @@
-package com.nebula.oauth2.authentication.consts;
+package com.nebula.common.security.consts;
 
 /**
  * Security 权限常量
  *
  * @author feifeixia
  */
-//todo re-arrange constants in different modules
 public interface SecurityConstants {
 
     /**
@@ -47,4 +46,13 @@ public interface SecurityConstants {
      * 手机号登录路径
      */
     String MOBILE_LOGIN_URL = "/login/mobile";
+    /**
+     * 内部
+     */
+    String FROM_IN = "Y";
+
+    /**
+     * 标志
+     */
+    String FROM = "from";
 }
