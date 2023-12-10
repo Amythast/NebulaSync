@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    mkdir sync
+    cd sync
+    git clone https://github.com/Amythast/NebulaSync.git
+    cd NebulaSync
+    git remote add azure https://ffxforcloudservice:5eojrpgerg5ipzbxhjn5j6zipeu7gdedttnufb6mqpxgaawaffkq@dev.azure.com/ffxforcloudservice/NebulaSync/_git/NebulaSync    
+    git branch -D $(branch)
+    git checkout -b $(branch)
+        
+    git push -d azure $(branch)
+    git push -u azure $(branch) --force
+    displayName: 'Command Line Script'
+
